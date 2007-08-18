@@ -6,7 +6,7 @@
 Summary:	A generic credential caching module for the apache Web server
 Name:		apache-%{mod_name}
 Version:	2.0.8
-Release:	%mkrel 4
+Release:	%mkrel 5
 Group:		System/Servers
 License:	Apache License
 URL:		http://killa.net/infosec/mod_authenticache/
@@ -22,8 +22,6 @@ Requires:	apache-conf >= 2.2.0
 Requires:	apache >= 2.2.0
 BuildRequires:	apache-devel >= 2.2.0
 BuildRequires:	file
-Provides:	apache2-mod_authenticache
-Obsoletes:	apache2-mod_authenticache
 Epoch:		1
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
@@ -94,5 +92,3 @@ fi
 %attr(0644,root,root) %config(noreplace) %{_sysconfdir}/httpd/modules.d/%{mod_conf}
 %attr(0755,root,root) %{_libdir}/apache-extramodules/%{mod_so}
 %{_var}/www/html/addon-modules/*
-
-
