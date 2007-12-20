@@ -23,6 +23,7 @@ Requires:	apache >= 2.2.0
 BuildRequires:	apache-devel >= 2.2.0
 BuildRequires:	file
 Epoch:		1
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 %{mod_name} provides a simple and generic method for caching
