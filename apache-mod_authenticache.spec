@@ -6,7 +6,7 @@
 Summary:	A generic credential caching module for the apache Web server
 Name:		apache-%{mod_name}
 Version:	2.0.8
-Release:	%mkrel 6
+Release:	%mkrel 7
 Group:		System/Servers
 License:	Apache License
 URL:		http://killa.net/infosec/mod_authenticache/
