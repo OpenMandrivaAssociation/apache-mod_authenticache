@@ -1,0 +1,28 @@
+--- mod_authenticache.c	2004-03-06 02:47:03.000000000 +0100
++++ mod_authenticache.c.oden	2005-12-14 05:24:19.000000000 +0100
+@@ -85,6 +85,25 @@
+ 
+ #include "defines.h"
+ 
++#if AP_MODULE_MAGIC_AT_LEAST(20051115, 0)
++/* APR 1.x compatibility */
++#define ap_pstrdup apr_pstrdup
++#define ap_psprintf apr_psprintf
++#define ap_pcalloc apr_pcalloc
++#define ap_table_setn apr_table_setn
++#define ap_register_cleanup apr_pool_cleanup_register
++#define APR_XtOffsetOf APR_OFFSETOF
++#define ap_pstrcat apr_pstrcat
++#define ap_null_cleanup apr_pool_cleanup_null
++#define ap_base64decode apr_base64_decode
++#define ap_base64decode_len apr_base64_decode_len
++#define ap_base64encode apr_base64_encode
++#define ap_base64encode_len apr_base64_encode_len
++#define ap_table_add apr_table_add
++#define ap_vsnprintf apr_vsnprintf
++#define ap_snprintf apr_snprintf
++#define MD5_DIGESTSIZE APR_MD5_DIGESTSIZE
++#endif
+ 
+ module AP_MODULE_DECLARE_DATA authenticache_module;
+ 
