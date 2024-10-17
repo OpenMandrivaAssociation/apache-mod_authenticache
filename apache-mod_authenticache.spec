@@ -9,7 +9,7 @@ Version:	2.0.8
 Release:	%mkrel 15
 Group:		System/Servers
 License:	Apache License
-URL:		http://killa.net/infosec/mod_authenticache/
+URL:		https://killa.net/infosec/mod_authenticache/
 Source0:	http://killa.net/infosec/mod_authenticache/%{mod_name}-%{version}.tar.bz2
 Source1:	%{mod_conf}.bz2
 Source2:	%{mod_name}-example_files.tar.bz2
